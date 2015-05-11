@@ -1,4 +1,5 @@
-# polymerboot
+polymerboot
+============
 It's my Polymer schema for apps
 
-[Here](http://frkr.github.io/polymerboot/)
+See the [component page](http://frkr.github.io/polymerboot/) for more information.

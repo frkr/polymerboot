@@ -1,0 +1,25 @@
+{
+  "name": "polymerboot",
+  "homepage": "https://github.com/frkr/polymerboot",
+  "authors": [
+    "Davi SM <davimesquita@gmail.com>"
+  ],
+  "description": "It's my Polymer schema for apps",
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "polymerboot",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "font-roboto": "polymer/font-roboto#~0.5.0",
+    "polymer": "polymer/polymer#~0.5.0",
+    "core-scaffold": "polymer/core-scaffold#~0.5.0",
+    "core-header-panel": "polymer/core-header-panel#~0.5.0",
+    "core-toolbar": "polymer/core-toolbar#~0.5.0",
+    "core-menu": "polymer/core-menu#~0.5.0",
+    "core-item": "polymer/core-item#~0.5.0"
+  }
+}

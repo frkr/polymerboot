@@ -6,7 +6,9 @@
 <link rel="import" href="components/core-menu/core-menu.html">
 <link rel="import" href="components/core-item/core-item.html">
 <link rel="import" href="components/core-icons/core-icons.html">
+<link rel="import" href="components/paper-icon-button/paper-icon-button.html">
 
+<!-- verificar se usara este import -->
 <link rel="import" href="components/core-drawer-panel/core-drawer-panel.html">
 
 <polymer-element name="app-boot">
@@ -15,20 +17,9 @@
             core-scaffold {
                 font-family: 'RobotoDraft', sans-serif;
             }
-            core-toolbar {
-                background: #455a64;
-                color: #cfd8dc;
-            }
-            core-header-panel {
-                background: #cfd8dc;
-                color: #607d8b;
-            }
-            .content {
-                padding: 20px;
-            }
         </style>
-        <core-scaffold>
-            <core-header-panel navigation flex mode="scroll">
+        <core-scaffold shadow mode="waterfall-narrow">
+            <core-header-panel shadow navigation flex mode="waterfall-narrow">
                 <core-toolbar>
                     <span>Menu</span>
                 </core-toolbar>
@@ -36,13 +27,30 @@
                     <core-item label="Account" icon="account-circle"></core-item>
                 </core-menu>
             </core-header-panel>
+            
+            <div tool horizontal layout flex center-justified class="middle">
+                Tittle
+            </div>
+            <div tool horizontal layout flex end-justified class="middle"><paper-icon-button id="searchbutton" icon="search"></paper-icon-button></div>
 
-            <span tool>
-                Polymer Boot
-            </span>
-
-            <div fit class="content">
-                <h1>Hello World!</h1>
+            <div fit>
+                <div style="border: 1px solid #bebebe; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff; color: #555;">
+                <div style="display: inline-block; height: 64px; width: 64px; border-radius: 50%; background: #ddd; line-height: 64px; font-size: 30px; color: #666; text-align: center;">
+                Ra
+                </div>
+                <div style="font-size: 22px; padding: 8px 0 16px; color: #888;">
+                Title
+                </div>
+                <div style="font-size: 16px; padding-bottom: 8px;">
+                Header
+                </div>
+                <div style="font-size: 12px;">
+                Text 1
+                </div>
+                <div style="font-size: 12px;">
+                Text 2
+                </div>
+                </div>
                 <!--
                 indigo
                 c5cae9 100

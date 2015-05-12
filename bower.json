@@ -21,6 +21,7 @@
     "core-toolbar": "polymer/core-toolbar#~0.5.0",
     "core-menu": "polymer/core-menu#~0.5.0",
     "core-item": "polymer/core-item#~0.5.0",
-    "paper-icon-button": "polymer/paper-icon-button#~0.5.0"
+    "paper-icon-button": "polymer/paper-icon-button#~0.5.0",
+    "paper-fab": "polymer/paper-fab#~0.5.0"
   }
 }

@@ -8,11 +8,9 @@
 <link rel="import" href="components/core-icons/core-icons.html">
 <link rel="import" href="components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="components/paper-fab/paper-fab.html">
+<link rel="import" href="components/core-pages/core-pages.html">
 
-<!-- verificar se usara este import -->
-<link rel="import" href="components/core-drawer-panel/core-drawer-panel.html">
-
-<polymer-element name="app-boot">
+<polymer-element name="app-boot" attributes="app start">
     <template>
         <style>
             core-scaffold {
@@ -28,130 +26,63 @@
         </style>
         
         <paper-fab class="fab" icon="add"></paper-fab>
-        
-        <core-scaffold shadow mode="waterfall-narrow">
-            <core-header-panel shadow navigation flex mode="waterfall-narrow">
+         
+        <core-scaffold mode="waterfall">
+            <core-header-panel navigation flex mode="waterfall">
                 <core-toolbar>
-                    <span>Menu</span>
+                    <span>{{menu}}</span>
                 </core-toolbar>
-                <core-menu>
-                    <core-item label="Account" icon="account-circle"></core-item>
+                <core-menu on-core-select="{{selectAction}}">
+                    <core-item num="0" label="Account" icon="account-box"></core-item>
+                    <core-item num="1" label="book" icon="book"></core-item>
                 </core-menu>
             </core-header-panel>
             
             <div tool horizontal layout flex center-justified class="middle">
-                Tittle
+                {{tittle}}
             </div>
             <div tool horizontal layout flex end-justified class="middle"><paper-icon-button id="searchbutton" icon="search"></paper-icon-button></div>
-
-            <div fit>
-                <div style="border: 1px solid #bebebe; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff; color: #555;">
-                <div style="display: inline-block; height: 64px; width: 64px; border-radius: 50%; background: #ddd; line-height: 64px; font-size: 30px; color: #666; text-align: center;">
-                Ra
+            
+            <core-pages id="pages" selected="0">
+                <div fit >
+                    <div style="border: 1px solid #bebebe; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff; color: #555;">
+                        <div style="display: inline-block; height: 64px; width: 64px; border-radius: 50%; background: #ddd; line-height: 64px; font-size: 30px; color: #666; text-align: center;">
+                        Pa
+                        </div>
+                        <div style="font-size: 22px; padding: 8px 0 16px; color: #888;">
+                            {{tittle}}
+                        </div>
+                        <div style="font-size: 16px; padding-bottom: 8px;">
+                            Header
+                        </div>
+                        <div style="font-size: 12px;">
+                            Text 1
+                        </div>
+                        <div style="font-size: 12px;">
+                            Text 2
+                        </div>
+                    </div>
                 </div>
-                <div style="font-size: 22px; padding: 8px 0 16px; color: #888;">
-                Title
+                <div fit>
+                    asdf
                 </div>
-                <div style="font-size: 16px; padding-bottom: 8px;">
-                Header
-                </div>
-                <div style="font-size: 12px;">
-                Text 1
-                </div>
-                <div style="font-size: 12px;">
-                Text 2
-                </div>
-                </div>
-                <!--
-                indigo
-                c5cae9 100
-                303f9f 500
-                3f51b5 700
-                
-                blue gray
-                607d8b 500
-                cfd8dc 100
-                455a64 700
-                -->
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-            </div>
+            </core-pages>
             
         </core-scaffold>
     </template>
     <script>
             Polymer(
                 {
-                    
+                    menu: "polymerboot",
+                    tittle: "polymerboot",
+                    selectAction: function (e, detail)
+                    {
+                        if (detail.isSelected)
+                        {
+                          var selectedItem = detail.item;
+                          this.$.pages.selected = selectedItem.attributes.num.nodeValue;
+                        }
+                    }
                 }
             );
     </script>

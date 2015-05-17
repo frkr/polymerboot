@@ -10,7 +10,7 @@
 <link rel="import" href="components/paper-fab/paper-fab.html">
 <link rel="import" href="components/core-pages/core-pages.html">
 
-<polymer-element name="app-boot" attributes="app start">
+<polymer-element name="app-boot" attributes="menu tittle">
     <template>
         <style>
             core-scaffold {
@@ -79,8 +79,9 @@
                     {
                         if (detail.isSelected)
                         {
-                          var selectedItem = detail.item;
-                          this.$.pages.selected = selectedItem.attributes.num.nodeValue;
+                            var selectedItem = detail.item;
+                            this.$.pages.selected = selectedItem.attributes.num.nodeValue;
+                            this.tittle = selectedItem.attributes.label.nodeValue;
                         }
                     }
                 }

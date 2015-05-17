@@ -17,6 +17,5 @@
   },
   "_source": "git://github.com/polymer/core-menu.git",
   "_target": "~0.5.0",
-  "_originalSource": "polymer/core-menu",
-  "_direct": true
+  "_originalSource": "polymer/core-menu"
 }
